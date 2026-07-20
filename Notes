@@ -1,0 +1,68 @@
+vs code
+live server
+live preview
+prettier
+
+basic structure of html
+declaration ---> it tell the type and version(5) of doc to the browser
+<!DOCTYPE html>
+
+1.ctrl / ---> comments
+2.if we want paragraph type "Lorem"
+3. basic tags
+   <html> </html> ---> root element
+   <head> </head> ---> meta data
+   <title> </title> ---> title of the page
+   <body> </body> ---> content of the page
+4. heading tags
+   h1 - h6
+   <h1> - largest heading </h1>
+   <h2> - second largest heading </h2>
+   <h3> - third largest heading </h3> 
+   <h4> - fourth largest heading </h4>
+   <h5> - fifth largest heading </h5>
+   <h6> - smallest heading </h6>
+5. paragraph tag
+   <p> </p> ---> paragraph
+6. comments
+   <!--  -->
+7. line break
+   <br> ---> line break
+8. horizontal rule
+   <hr> ---> horizontal line
+9. closing tags
+   </br> ---> closing line break
+   </hr> ---> closing horizontal rule
+10. indentation
+    - it is used to make the code more readable and organized
+    - it is not mandatory but it is a good practice
+11. self closing tags
+    - some tags do not have closing tags
+    - they are called self closing tags
+    - example: <br>, <hr>, <img>, <input>
+12. semantic tags
+    - semantic tags are used to give meaning to the content
+    - example: <header>, <footer>, <article>, <section>, <nav>
+13.anchor tag
+    - <a> </a> ---> anchor tag
+    - it is used to create links
+    - example: <a href="https://www.google.com">Google</a>
+14. absolute url
+    - it is used to link to external websites
+    - example: <a href="https://www.google.com">Google</a>
+15. relative url
+    - it is used to link to internal pages 
+16. attributes
+    - attributes are used to provide additional information about an element
+    - example: <a href="https://www.google.com" target="_blank">Google</a>
+    - common attributes: id, class, src, alt, href, target
+17.href attribute
+    - it is used to specify the URL of the page the link goes to
+    - example: <a href="https://www.google.com">Google</a>
+18.target attribute
+    - it is used to specify where to open the linked document
+    - example: <a href="https://www.google.com" target="_blank">Google</a>
+19.list tags
+    - <ul> </ul> ---> unordered list
+    - <ol> </ol> ---> ordered list
+    - <li> </li> ---> list item
