@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header,footer{
+            background-color: darkblue;
+            text-align: center;
+            padding: 40px;
+        }
+        header > button{
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .s1{
+            text-align:center;
+            background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://t4.ftcdn.net/jpg/17/91/12/03/360_F_1791120397_FgyNQwxVL8siO822piOCLmhdTnsXJgRh.jpg');
+            height:600px;
+            background-size:100% 100%;
+            color:white;
+            padding:150px 20px;
+        }
+        .s2{
+            text-align:center;
+            background-color: whitesmoke;
+            padding: 100px 20px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            display: inline-block;
+            color: whitesmoke;
+            font-size: 20px;
+            border-radius: 10px;
+            line-height: 200px;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+            transition:all 1s;
+        }
+        .box:hover{
+            transform: translate(0px,-20px);
+            transition:all 1s;
+            
+        }
+
+        .s3{
+            text-align:center;
+            background-color: whitesmoke;
+            padding: 100px 20px;
+        }
+        .card{
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+            display: inline-block;
+            color: black;
+            font-size: 20px;
+            border-radius: 10px;
+            border: 2px solid blue;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+            background-color: white;
+            transition:all 1s;
+        }
+        .card:hover{
+            transform: translate(0px,-20px);
+            
+        }
+        .s4{
+            background-color: whitesmoke;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .font-box{
+            width: 550px;
+            margin: 15px auto;
+            padding: 15px;
+            background-color: lightblue;   
+            border-radius: 5px;
+            text-align: left;
+            color: black;
+        }
+        .demo{
+            width: 650px;
+            margin: 30px auto;
+            font-size: 18px;
+            line-height: 1.8;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button>home</button>
+        <button>about</button>
+        <button>contact</button>
+        <button>services</button>
+    </header>
+    <section class = "s1">
+        <h1>Learn CSS through projects</h1>
+        <p>CSS is a powerful tool for web design, allowing you to create visually appealing and responsive websites. By working on projects, you can gain hands-on experience and improve your skills in CSS. Start with simple projects and gradually move on to more complex ones to enhance your understanding of CSS properties, selectors, and layout techniques.</p>
+    </section>
+
+    <section class = "s2">
+        <h1>CSS COLORS</h1>
+        <div class="parent">
+        <div class="box" style="background-color: red;">content</div>
+        <div class="box" style="background-color: blue;">content</div>
+        <div class="box" style="background-color: green;">content</div>
+        <div class="box" style="background-color: rgb(225, 18, 225);">content</div>
+    </div>
+    </section>
+
+    <section class = "s3">
+        <h1> CSS BOX MODEL </h1>
+        <div class="parent">
+            <div class="card">
+            <h3>Card One</h3>
+            <p> padding creates inside elements Border surrounds</p>
+        </div>
+        <div class="card">
+            <h3>Card Two</h3>
+            <p> padding creates inside elements Border surrounds</p>
+        </div>
+        <div class="card">
+            <h3>Card Three</h3>
+            <p> padding creates inside elements Border surrounds</p>
+        </div>
+        </div>
+    </section>
+    <section class="s4">
+    <h1>CSS Fonts</h1>
+    <p class="font-box" style="font-weight:300;">Light Font Weight (300)</p>
+    <p class="font-box" style="font-weight:400;">Normal Font Weight (400)</p>
+    <p class="font-box" style="font-weight:700;">Bold Font Weight (700)</p>
+    <p class="demo">This paragraph demonstrates font-family, font-size,letter-spacing, line-height and font-weight properties.</p>
+</section>
+<footer style="color:white">copyright@2023</footer>
+</body>
+</html>
