@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <div>content <p>paragraph</p></div> -->
+    <style>
+    div{
+        
+        /* width: 50px;
+        height: 50px;  */
+        /* background: red; */
+        padding:10px;
+    }
+    p{
+        background: blue;
+        /* width: 50px;
+        height: 50px; */
+    }
+
+    .Parent{
+        display: flex;
+        /* flex-direction: column;
+        flex-direction: row;
+        flex-direction: row-reverse;
+        flex-direction: column-reverse; */
+        justify-content: space-between;
+        justify-content: space-evenly;
+        justify-content: space-around;
+        justify-content: start;
+        justify-content: end;
+        justify-content: center;
+        height: 100vh;
+        /* align-items: end;
+        align-items: start;
+        align-items: center; */
+        flex-wrap: wrap-reverse;
+        align-content: center;
+        align-content: start;
+        align-content: end;
+        align-content: space-between;
+        align-content: space-evenly;
+        align-content: space-around;
+    }
+    .Child{
+        background-color: black;
+        padding: 20px;
+        border: 2px solid ;
+        background-color: aqua;
+        width: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="Parent">
+        <div class="Child">child1</div>
+        <div class="Child">child2</div>
+        <div class="Child">child3</div>
+        <div class="Child">child4</div>
+        <div class="Child">child5</div>
+        <div class="Child">child6</div>
+        <div class="Child">child7</div>
+     </div>
+
+</body>
+</html>
