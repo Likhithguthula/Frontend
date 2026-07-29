@@ -15,7 +15,7 @@
             box-sizing:border-box;
         }
 
-        header{
+        header,footer{
             background:rgb(10,10,10);
             color:white;
             display:flex;
@@ -140,6 +140,68 @@
             padding:20px;
             transition:0.4s;
         }
+        .s4{
+            background: black;
+            text-align: center;
+            color: white;
+            padding: 3%;
+        }
+        .projectparent{
+            display:flex;
+            justify-content: center;
+            line-height:1.5;
+            gap:10px;
+        }
+        .child{
+            flex-basis:30%;
+            padding:3%;
+            background: rgb(38,34,34);
+        }
+        .s4 img{
+            width: 100%;
+            height: 250px;
+        }
+        .s5{
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 4%;
+        }
+        .s5 h1{
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        table{
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+            background: rgb(20,20,20);
+        }
+        th{
+            background: rgb(26, 221, 26);
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+        }
+        td{
+            padding: 15px;
+            border: 1px solid #333;
+            color: white;
+        }
+        .s6{
+            background: black;
+            color: white;
+            line-height: 1.5;
+            display: flex;
+        }
+        .s6>div{
+            flex-basis: 45%;
+            padding: 5%;
+        }
+        li::marker{
+            color: green;
+            font-size: 2rem;
+        }
         @media screen and (max-width:550px){
             header,
             .s1,
@@ -208,5 +270,80 @@
             </div>
         </div>
     </section>
+    <section class="s4">
+        <h1> My Projects </h1>
+        <div class="projectparent">
+            <div class="child">
+                <div><img src="https://media.licdn.com/dms/image/v2/C5612AQGwStkQ64nbYA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1520210212264?e=2147483647&v=beta&t=v1kgGmGjm5khoqMnxq8jGf8xqI2VvDNHJn3yjLJzz_c"></div>
+                <h2>Portfolio website</h2>
+                <p>project is helpful for a development</p>
+                <button class="btn2">view project</button>
+            </div>
+            <div class="child">
+                <div><img src="https://i.ibb.co/3CJx9cD/project.jpg"></div>
+                <h2>Portfolio website</h2>
+                <p>project is helpful for a development</p>
+                <button class="btn2">view project</button>
+            </div>
+            <div class="child">
+                <div><img src="https://kantata.marketing/wp-content/uploads/2021/08/project-managemenr-goals.jpg"></div>
+                <h2>Portfolio website</h2>
+                <p>project is helpful for a development</p>
+                <button class="btn2">view project</button>
+            </div>
+        </div>
+    </section>
+    <section class="s5">
+        <h1>Education</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Qualification</th>
+                <th>Institution</th>
+                <th>Year</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>High School</td>
+                <td>XYZ high school</td>
+                <td>2018-2020</td>
+                <td>New York,USA</td>
+            </tr>
+            <tr>
+                <td>Bachlor of computer Science</td>
+                <td>XYZ university</td>
+                <td>2022-2026</td>
+                <td>New York, USA</td>
+            </tr>
+        </tbody>
+        </table>
+    </section>
+    <section class="s6">
+        <div>
+            <h2>Achievemnts</h2>
+            <div>Completed HTML & CSS fundamentals course.</div>
+            <div>Completed HTML & CSS fundamentals course.</div>
+            <div>Completed HTML & CSS fundamentals course.</div>
+            <div>Completed HTML & CSS fundamentals course.</div>
+        </div>
+        <div>
+            <h2>Contact</h2>
+            <ul>
+            <li>Email: abc@example.com</li>
+            <li>Phone: +6732 234 123</li>
+            <li>Website: www.abc.com</li>
+            <li>Location: New York, USA</li>
+        </ul>
+    </section>
+    <footer>
+        <h1>2024 John doe. All rights reserved.</h1>
+        <div>
+            <i class="fa-soild fa-github"></i>
+            <i class="fa-soild fa-linkedin"></i>
+            <i class="fa-soild fa-twitter"></i>
+        </div>
+    </footer>
 </body>
 </html>
