@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        header{
+            background:rgb(10,10,10);
+            color:white;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:2%;
+        }
+
+        header span{
+            border:2px solid green;
+            padding:5px;
+            color:green;
+            text-align:center;
+            margin:15px;
+        }
+
+        header a{
+            color:white;
+            padding:10px;
+            text-decoration:none;
+        }
+
+        header a:hover{
+            color:green;
+            border-bottom:2px solid green;
+        }
+
+        .s1{
+            display:flex;
+            background:black;
+            color:white;
+            align-items:center;
+            font-size:1.5rem;
+            line-height:1.5;
+        }
+
+        .s1 div{
+            flex-basis:50%;
+            padding:3%;
+        }
+
+        .s1 img{
+            width:100%;
+            height:100%;
+        }
+
+        .s1 span{
+            color:green;
+        }
+
+        .btn1{
+            padding:10px;
+            background:rgb(14,237,14);
+            cursor:pointer;
+        }
+
+        .btn2{
+            padding:10px;
+            background:transparent;
+            color:white;
+            border:2.5px solid green;
+            cursor:pointer;
+        }
+
+        .s2{
+            padding:2%;
+            background:black;
+        }
+
+        .s2 div{
+            height:80vh;
+            background:rgb(88,88,88);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .s2 h1{
+            background:green;
+            color:white;
+            padding:20px;
+        }
+
+        .s3{
+            background:black;
+            color:white;
+            text-align:center;
+            padding:4%;
+        }
+
+        .parent{
+            display:flex;
+            gap:5%;
+            padding:4%;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            flex:1 1 300px;
+            background:rgb(88,88,88);
+            padding:20px;
+            min-height:300px;
+            line-height:2;
+            text-align:center;
+            border:2px solid transparent;
+            cursor:pointer;
+            transition:all 0.4s ease;
+        }
+        .card:hover{
+            background:green;
+            color:white;
+            border:2px solid white;
+            transform:translateY(-12px);
+            box-shadow:0 10px 25px rgba(0,255,0,0.5);
+        }
+        .card:hover i{
+            color:white;
+        }
+        .s3 i{
+            color:green;
+            font-size:3rem;
+            padding:20px;
+            transition:0.4s;
+        }
+        @media screen and (max-width:550px){
+            header,
+            .s1,
+            .parent{
+                flex-direction:column;
+            }
+            html{
+                font-size:13px;
+            }
+            .card{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1><span>JD</span>John Doe</h1>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#Achievements">Achievements</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="s1">
+        <div>
+            <h1>Hi, I am <span>John Doe</span></h1>
+            <h2>I build simple and clean websites.</h2>
+            <p>
+                I am a web development student who loves turning ideas into
+                real, working websites.
+            </p>
+            <button class="btn1">View Projects</button>
+            <button class="btn2">Download CV</button>
+        </div>
+        <div>
+            <img src="https://beapython.dev/wp-content/uploads/2020/01/canva-software-developer-working.jpg" alt="Developer">
+        </div>
+    </section>
+    <section class="s2">
+        <div>
+            <h1>FullStack Dev</h1>
+        </div>
+    </section>
+    <section class="s3">
+        <h1>What I Do</h1>
+        <div class="parent">
+            <div class="card">
+                <i class="fa-solid fa-house"></i>
+                <h2>Web Design</h2>
+                <p>Design clean and attractive websites that provide a great user experience.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-desktop"></i>
+                <h2>Web Development</h2>
+                <p>Build responsive and modern websites using HTML, CSS and JavaScript.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-code"></i>
+                <h2>Frontend Development</h2>
+                <p>Create interactive web applications with responsive layouts and clean code.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
