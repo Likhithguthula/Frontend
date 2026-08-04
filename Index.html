@@ -4,36 +4,239 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="row g-3">
-        <div class="container-fluid col-4 bg-warning p-3">content</div>
-        <div class="container-fluid col-4 bg-danger p-3">content</div>
-        <div class="container-fluid col-4 bg-success p-3">content</div>
-        <div class="container-fluid col-4 bg-primary p-3">content</div>
+    <div id="container"></div>
+    <!--
+    static website
+    dynamic websites-Javascript 
+    
+    features
+    add to cart
+    filters
+    sorting
+    form validations
+    crud
+    
+    javascript is a high level interpreted programming language that is used to create dynamic nature to the website
+    
+    it was introduced in 1991 by brendan eich
+    es1
+    es2
+    es3
+    es4
+    es5*->it is pre requistic
+
+    How to insert javascript
+    1) inline
+    <button onclick='console.log("inline js")'>click me</button>
+    2) internal
+    <script>
+        console.log('internal js')
+    </script>
+    3) external
+    demo.js
+    console.log('external js')
+
+    <button onclick='console.log("inline js")'>click me</button>
 
 
-        <div class="container-fluid col-6 bg-warning p-3">content1</div>
-        <div class="container-fluid col-6 bg-danger p-3">content2</div>
-        <div class="container-fluid col-6 bg-success p-3">content3</div>
-        <div class="container-fluid col-6 bg-primary p-3">content4</div>
+   <script>
+    console.log('internal.js')
+   </script>
+   <script src="demo.js"></script>
+
+    <script src='demo.js'></script>
+
+    conditional statements
+    loops
+    functions
+    variables: variables means it is like container which is used to store the data and data could be anything.
+
+    variables are defined with var, let and const keywords followed by variable name followed by value.
+
+    var a = 10;
+    let b = 20;
+    const c = 30;
+    console.log(a,b,c)
+
+    variable terms
+    variable declaration
+    var a;
+
+    undefined
+    console.log(a);
+
+    assignment
+    var b;
+    b = 20;
+
+    initialization
+    var c=30;
+
+    not defined
+    console.log(d)
+    suppose if there is unexisting variable
+
+    **Hoisting:it is a behaviour of the javascript where the declaration of a variable and functions are moved to top even before
+               the execution.
+      
+
+    
 
 
-        <div class="container-fluid col-3 bg-warning p-3">content</div>
-        <div class="container-fluid col-3 bg-danger p-3">content</div>
-        <div class="container-fluid col-3 bg-success p-3">content</div>
-        <div class="container-fluid col-3 bg-primary p-3">content</div>
+    operators
+    datatypes : 
+    1) primitive datatypes: it is a datatype which stores the single values and which are immutable and also which stores in stack
+         
+        -> strings : it is a collection of characters that are enclosed in '' or "" or `` and also accessed by index, strings are immutable
+        now the question is how strings are immutable
+        ex:
+        var s ='hello world'
+        s[0]='z'
+        console.log(s)
 
-        <div class="container-fluid col-lg-3 col-md-4 col-sm-6 bg-warning p-3">content</div>
-        <div class="container-fluid col-lg-3 col-md-4 col-sm-6 bg-danger p-3">content</div>
-        <div class="container-fluid col-lg-3 col-md-4 col-sm-6 bg-success p-3">content</div>
-        <div class="container-fluid col-lg-3 col-md-4 col-sm-6 bg-primary p-3">content</div>
+        ->numbers
+        var n = 10
+        var m = -11
+        var num = 10.2
+        console.log(n,m,num)
+
+    2) non-primitive datatypes: it is datatype which stores the multiple values and which are mutable and also which we can change, it stores in heap
+
+     ->arrays
+     it is used to store the multiple values in a single variable
+     it store both homogeneous and hetrogenous
+     it can be accessed via numbered i
+     var arr[1,true,'hello']
+     console.log(arr)
+     console.log(arr[2])
+
+     var arr=[1, true, 'hello']
+   console.log(arr)
+
+   console.log(arr[2])
+   arr[2]='hello world'
+   console.log(arr)
+   
+  --Objects:
+   it is used to store the collection of data in key value pairs, it can be accessed by named indexing
+     let data=[2,25,3]
+        let obj={
+            batchno:3,
+            batchcount:25,
+            pythonbatchno:3
+        }
+
+    --functions:
+    function greet(){
+    console.log('hello world')
+    }
+    greet()
+
+    console.log(type(a))
 
 
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     var marks = prompt('enter your marks')
+    var grade=''
+    
+    if(marks>80){
+        grade='A'
+    }
+    else if(marks>70){
+        grade='B'
+    }
+    else if(marks>60){
+        grade='C'
+    }
+    else{
+        grade='F'
+    }
+    let container=document.getElementById('container')
+    container.innerHTML=`Your Grade is <h1>${grade}</h1>`
 
+   --
+
+    3) boolean-> true or false
+       
+       var isadmin=true;
+       var isadmin=false;
+       var membership=true;
+       var isactive=true;
+       console.log(isadmin);
+
+    4) undefined
+    var a 
+    console.log(a)
+
+    5)null
+    it is a intentional absence of a value
+    var id=null
+    var empname=null
+    console.log(id+10)
+
+
+
+    dom->document object model
+    asynchronous concepts
+    callbacks promises
+    api calling
+    -->
 </body>
+
+   <!-- <button onclick='console.log("inline js")'>click me</button>
+
+
+   <script>
+    console.log('internal.js')
+   </script>
+   <script src="demo.js"></script>
+
+   <script>
+    var a
+    console.log(a);
+
+    var b;
+    b=20;
+    console.log(b);
+
+    var c=30;
+    console.log(c)
+
+    console.log(d) -->
+
+    
+    
+   <!-- </script> -->
+    <script>
+    
+    //function greet(){
+    //console.log('hello world')
+    // }
+    //greet()
+
+    //console.log(typeof(a))
+
+    var marks = prompt('enter your marks')
+    var grade=''
+    
+    if(marks>80){
+        grade='A'
+    }
+    else if(marks>70){
+        grade='B'
+    }
+    else if(marks>60){
+        grade='C'
+    }
+    else{
+        grade='F'
+    }
+    let container=document.getElementById('container')
+    container.innerHTML=`Your Grade is <h1>${grade}</h1>`
+    
+    
+
+    </script>
+
 </html>
