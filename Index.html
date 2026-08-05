@@ -4,239 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #container{
+            display:grid;
+            grid-template-columns:20% 30% 50%;
+        }
+    </style>
 </head>
 <body>
     <div id="container"></div>
     <!--
-    static website
-    dynamic websites-Javascript 
-    
-    features
-    add to cart
-    filters
-    sorting
-    form validations
-    crud
-    
-    javascript is a high level interpreted programming language that is used to create dynamic nature to the website
-    
-    it was introduced in 1991 by brendan eich
-    es1
-    es2
-    es3
-    es4
-    es5*->it is pre requistic
+    Loops
+    types of loops
+    for loop : it is also called as counter loop - when we know the iterations
 
-    How to insert javascript
-    1) inline
-    <button onclick='console.log("inline js")'>click me</button>
-    2) internal
+    for(startingpoint,endingpoint,medium){
+    //memories
+    }
+
+    for (initialization; condition; updation){
+    //block of code
+    }
+
+    for(let i=1;i<=10;i++){
+    console.log(i)
+    }
+
+    while loop : event controlled loop - when the iterations are not known
+
+    while(true){
+    console.log("hello")
+    
+    }
+
+    while(true){
+    let inp=prompt("enter items")
+    console.log(inp)
+    if(inp == 'done'){
+        console.log("order completed")
+        break
+    }
+}  
+ 
+   do while loop :
+
+   let i = 5
+do{
+    console.log(i)
+    i++
+    
+}
+while(i % 2 == 0)
+
+    for in : it is used to iterate the objects, arrays and strings, it will get the keys and indexes
+
+    let arr=['html', 'css', 'js']
+
+for(let i in arr){
+    console.log(i)//indexes
+    console.log(arr[i])//values
+}
+
+    for of : it is used to get arrays and strings
+    
+    let str='hello'
+
+for(let i of str){
+    console.log(i)
+}
+
+continue
+
+eg:
+let data =[
+    {productid:2344,status:'expired'},
+    {productid:442,status:'Not expired'},
+    {productid:2355,status:'Not expired'},
+    {productid:2044,status:'expired'},
+    {productid:23544,status:'expired'},
+    ]
+for(let i of data){
+    if(i.status =='expired'){
+        continue
+    }
+    console.log(i)
+}
+    
+break: it is used to terminate the block of code when the condition is met and the interpreter touches the block of code
+
+let password='1234'
+let c=0
+while(true){
+    let inp=prompt('enter your password')
+    if(inp==password){
+        console.log('welcome to banking')
+    }
+    c++
+    if(c==3){
+        console.log('card is blocked')
+        break
+        
+    }
+}
+    
+
+   Functions: it is block of reusable code that is used to perform a particular action when something invokes it
+                
+              functions are defined with function keyword followed by function name followed by () may include parameters followed by block of code
+              
+              function greet(){
+              console.log('hello')
+              }
+              points in functions
+              1) functions names stores functions definitions
+              2) logging
+              
+              return : 1) it is used to store the value of a function
+                       2) it is used to terminate the function block
+                       3) statements after return will not be executed
+                       4) only named functions can be hoisted-->
+                       
     <script>
-        console.log('internal js')
-    </script>
-    3) external
-    demo.js
-    console.log('external js')
+       let students=[
+       {name:'jai',marks:80},
+       {name:'sravan',marks:60},
+       {name:'jessy',marks:75},
+       {name:'rahul',marks:90}
+       ]
 
-    <button onclick='console.log("inline js")'>click me</button>
-
-
-   <script>
-    console.log('internal.js')
-   </script>
-   <script src="demo.js"></script>
-
-    <script src='demo.js'></script>
-
-    conditional statements
-    loops
-    functions
-    variables: variables means it is like container which is used to store the data and data could be anything.
-
-    variables are defined with var, let and const keywords followed by variable name followed by value.
-
-    var a = 10;
-    let b = 20;
-    const c = 30;
-    console.log(a,b,c)
-
-    variable terms
-    variable declaration
-    var a;
-
-    undefined
-    console.log(a);
-
-    assignment
-    var b;
-    b = 20;
-
-    initialization
-    var c=30;
-
-    not defined
-    console.log(d)
-    suppose if there is unexisting variable
-
-    **Hoisting:it is a behaviour of the javascript where the declaration of a variable and functions are moved to top even before
-               the execution.
-      
-
-    
-
-
-    operators
-    datatypes : 
-    1) primitive datatypes: it is a datatype which stores the single values and which are immutable and also which stores in stack
-         
-        -> strings : it is a collection of characters that are enclosed in '' or "" or `` and also accessed by index, strings are immutable
-        now the question is how strings are immutable
-        ex:
-        var s ='hello world'
-        s[0]='z'
-        console.log(s)
-
-        ->numbers
-        var n = 10
-        var m = -11
-        var num = 10.2
-        console.log(n,m,num)
-
-    2) non-primitive datatypes: it is datatype which stores the multiple values and which are mutable and also which we can change, it stores in heap
-
-     ->arrays
-     it is used to store the multiple values in a single variable
-     it store both homogeneous and hetrogenous
-     it can be accessed via numbered i
-     var arr[1,true,'hello']
-     console.log(arr)
-     console.log(arr[2])
-
-     var arr=[1, true, 'hello']
-   console.log(arr)
-
-   console.log(arr[2])
-   arr[2]='hello world'
-   console.log(arr)
-   
-  --Objects:
-   it is used to store the collection of data in key value pairs, it can be accessed by named indexing
-     let data=[2,25,3]
-        let obj={
-            batchno:3,
-            batchcount:25,
-            pythonbatchno:3
+       for(i of students){
+        grade=''
+        if(i.marks>70){
+            grade="A"
         }
-
-    --functions:
-    function greet(){
-    console.log('hello world')
-    }
-    greet()
-
-    console.log(type(a))
-
-
-     var marks = prompt('enter your marks')
-    var grade=''
-    
-    if(marks>80){
-        grade='A'
-    }
-    else if(marks>70){
-        grade='B'
-    }
-    else if(marks>60){
-        grade='C'
-    }
-    else{
-        grade='F'
-    }
-    let container=document.getElementById('container')
-    container.innerHTML=`Your Grade is <h1>${grade}</h1>`
-
-   --
-
-    3) boolean-> true or false
-       
-       var isadmin=true;
-       var isadmin=false;
-       var membership=true;
-       var isactive=true;
-       console.log(isadmin);
-
-    4) undefined
-    var a 
-    console.log(a)
-
-    5)null
-    it is a intentional absence of a value
-    var id=null
-    var empname=null
-    console.log(id+10)
-
-
-
-    dom->document object model
-    asynchronous concepts
-    callbacks promises
-    api calling
-    -->
-</body>
-
-   <!-- <button onclick='console.log("inline js")'>click me</button>
-
-
-   <script>
-    console.log('internal.js')
-   </script>
-   <script src="demo.js"></script>
-
-   <script>
-    var a
-    console.log(a);
-
-    var b;
-    b=20;
-    console.log(b);
-
-    var c=30;
-    console.log(c)
-
-    console.log(d) -->
-
-    
-    
-   <!-- </script> -->
-    <script>
-    
-    //function greet(){
-    //console.log('hello world')
-    // }
-    //greet()
-
-    //console.log(typeof(a))
-
-    var marks = prompt('enter your marks')
-    var grade=''
-    
-    if(marks>80){
-        grade='A'
-    }
-    else if(marks>70){
-        grade='B'
-    }
-    else if(marks>60){
-        grade='C'
-    }
-    else{
-        grade='F'
-    }
-    let container=document.getElementById('container')
-    container.innerHTML=`Your Grade is <h1>${grade}</h1>`
-    
-    
-
+        else if(i.marks>60){
+            grade="B"
+        }
+        else{
+            grade="C"
+        }
+        let container=document.getElementById('container')
+        let output=`
+        <div class='card'>
+            <h1>${i.name}</h1>
+            <div>${i.marks}</div>
+            <p>${grade}</p>
+        </div>
+        `
+        container.innerHTML+=output
+        console.log(output)
+       }
     </script>
-
+</body>
 </html>
