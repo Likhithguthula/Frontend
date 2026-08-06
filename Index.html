@@ -4,156 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #container{
-            display:grid;
-            grid-template-columns:20% 30% 50%;
+
+    <script>
+        // let arrowfun1 = (a,b) => {
+        //     return a + b;
+        // }
+        // console.log(arrowfun1(1,2));
+
+        // let an = function(){
+        //     console.log("Hello world!");
+        // }
+        // an();
+
+        // function addtocart(callback){
+        //     console.log("products added to cart");
+        //     callback(order);
+        // }
+        // function payment(callback){
+        //     setTimeout(() => {  
+        //         console.log("payment completed");
+        //         callback();
+        //     },7000);
+        // }
+        // function order(){
+        //     console.log("order placed");
+        // }
+        // addtocart(payment);
+        
+        function outer(){
+            let count = 0;
+            console.log("outer function executed");
+            return function(){
+                count++;
+                console.log(count);
+                console.log("inner function executed");
+            }
         }
-    </style>
+        let a = outer();
+        a();
+        a();
+        a();
+        // outer()();
+        // outer()();
+
+    </script>
 </head>
 <body>
-    <div id="container"></div>
-    <!--
-    Loops
-    types of loops
-    for loop : it is also called as counter loop - when we know the iterations
-
-    for(startingpoint,endingpoint,medium){
-    //memories
-    }
-
-    for (initialization; condition; updation){
-    //block of code
-    }
-
-    for(let i=1;i<=10;i++){
-    console.log(i)
-    }
-
-    while loop : event controlled loop - when the iterations are not known
-
-    while(true){
-    console.log("hello")
     
-    }
-
-    while(true){
-    let inp=prompt("enter items")
-    console.log(inp)
-    if(inp == 'done'){
-        console.log("order completed")
-        break
-    }
-}  
- 
-   do while loop :
-
-   let i = 5
-do{
-    console.log(i)
-    i++
-    
-}
-while(i % 2 == 0)
-
-    for in : it is used to iterate the objects, arrays and strings, it will get the keys and indexes
-
-    let arr=['html', 'css', 'js']
-
-for(let i in arr){
-    console.log(i)//indexes
-    console.log(arr[i])//values
-}
-
-    for of : it is used to get arrays and strings
-    
-    let str='hello'
-
-for(let i of str){
-    console.log(i)
-}
-
-continue
-
-eg:
-let data =[
-    {productid:2344,status:'expired'},
-    {productid:442,status:'Not expired'},
-    {productid:2355,status:'Not expired'},
-    {productid:2044,status:'expired'},
-    {productid:23544,status:'expired'},
-    ]
-for(let i of data){
-    if(i.status =='expired'){
-        continue
-    }
-    console.log(i)
-}
-    
-break: it is used to terminate the block of code when the condition is met and the interpreter touches the block of code
-
-let password='1234'
-let c=0
-while(true){
-    let inp=prompt('enter your password')
-    if(inp==password){
-        console.log('welcome to banking')
-    }
-    c++
-    if(c==3){
-        console.log('card is blocked')
-        break
-        
-    }
-}
-    
-
-   Functions: it is block of reusable code that is used to perform a particular action when something invokes it
-                
-              functions are defined with function keyword followed by function name followed by () may include parameters followed by block of code
-              
-              function greet(){
-              console.log('hello')
-              }
-              points in functions
-              1) functions names stores functions definitions
-              2) logging
-              
-              return : 1) it is used to store the value of a function
-                       2) it is used to terminate the function block
-                       3) statements after return will not be executed
-                       4) only named functions can be hoisted-->
-                       
-    <script>
-       let students=[
-       {name:'jai',marks:80},
-       {name:'sravan',marks:60},
-       {name:'jessy',marks:75},
-       {name:'rahul',marks:90}
-       ]
-
-       for(i of students){
-        grade=''
-        if(i.marks>70){
-            grade="A"
-        }
-        else if(i.marks>60){
-            grade="B"
-        }
-        else{
-            grade="C"
-        }
-        let container=document.getElementById('container')
-        let output=`
-        <div class='card'>
-            <h1>${i.name}</h1>
-            <div>${i.marks}</div>
-            <p>${grade}</p>
-        </div>
-        `
-        container.innerHTML+=output
-        console.log(output)
-       }
-    </script>
 </body>
 </html>
