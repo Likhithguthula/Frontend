@@ -1,0 +1,141 @@
+<!-- 
+ synchronus
+ which executes line by line
+ 
+ asyncrhonous
+ which executes multiple lines of code simultaneously
+ 
+ -api calls,settimeout,setinterval,promises,async await
+ 
+ event loop mechanism
+ callstack
+ webapi
+ callback api
+ event loop
+ 
+ promises
+ it represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+ promise states
+
+ pending
+ success
+ failure
+
+ creating promise
+ let promise=new Promise((resolve,reject)=>{
+     let a=1+1
+     if(a==2){
+         resolve('success')
+     }else{
+         reject('failure')
+     }
+ })
+     promise.then((message)=>{
+         console.log('this is in then '+message)
+     }).catch((message)=>{
+         console.log('this is in catch '+message)
+     })
+
+     async function getprom(){
+     let data=await prom
+     console.log(data)
+     }
+     getprom()
+ -->
+
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        synchronous code
+         which executes line by line
+
+        assynchronous code
+        which executes parallely which takes time
+        -api calls , settimeout, setintervel, promises, async await
+
+        even loop mechanism
+        call stack'
+        web api
+        call back queue
+        event loop
+        
+        
+      console.log("first");
+      setTimeout(() => {
+        console.log("second");
+      }, 100000);
+      console.log("third");
+      
+      promises- it represt the eventul completion or failure of an asynchronus operation
+
+      
+      pending 
+      sucess-resolved
+      failure-rejected
+
+      creating a promise
+      let prom= new Promise((res,rej)=>{
+      val =10
+      if (val==10){
+      res('promise is resolve')
+      }else{
+      rej('promise is rejected')
+      }
+      })
+
+      consuming a promise
+      1) .then.catch
+        prom.then((result)=>console.log(result))
+        .catch((error)=>console.log(error))
+
+      2) async await
+      
+      
+      
+      
+      
+      
+      
+     
+      let prom= new Promise((res,rej)=>{
+      val =10
+      if (val==10){
+      res('promise is resolve')
+      }else{
+      rej('promise is rejected')
+      }
+      })
+
+      prom.then((result)=>console.log(result))
+      .catch((error)=>console.log(error))
+
+      //async makes the function asychronous functions
+      async function getprm(){
+        //await pauses the execution until the promise is settled
+        let data = await prom
+        console.log(data)
+      }
+      getprm()
+       */
+    
+       let prom=fetch('https://fakedoreapi.com/products')
+       prom.then((data)=>data.json())
+       .then((finaldata)=>console.log(finaldata))
+       .catch((error)=>console.log(error))
+
+       async function getdata(){
+        let data=await fetch('https://fakestoreapi.com/products')
+        let finaldata=await data.json()
+        console.log(finaldata)
+       }
+       getdata()
+    </script>
+  </body>
+</html>
