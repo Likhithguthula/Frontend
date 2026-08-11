@@ -6,83 +6,65 @@
     <title>Document</title>
 </head>
 <body>
-     <script>
-        // var a = 10;
-        // var b = 20;
-        // console.log(a);
+    <script>
+        // let arr = [83,22,61,1,4]
+        // let sortedarr = arr.sort((a,b) => {
+        //     //return a-b
+        //     return b-a   
+        // })
+        // console.log(sortedarr)
 
-        // const c = 10;
-        // const d = 20;
-        // console.log(c);
-        // console.log(d);
-
-        // let founder = "Sai Ram";
-        // console.log(founder);
-        // {
-        //     var trainer = "Ram";
-        //     // let trainer = "Ram";
-        //     console.log(founder);
-        //     console.log(trainer);
-        // }
-        // function classroom(){
-        //     console.log(founder);
-        // }
-        // classroom();
+        // let data = [
+        //     {name: "John", age: 30},
+        //     {name: "Jane", age: 25},
+        //     {name: "Bob", age: 35}
+        // ]
+        // let sorteddata = data.sort((a,b) => {
+        //     return a.age - b.age
+        // })
+        // console.log(sorteddata)
 
 
+        //shallow copy and deep copy
+        // let arr = ['html','css'] 
+        // let b = arr 
+        // b[0] = 'react'
+        // console.log(arr) //html csss
+        // console.log(b) //react css
 
-        // const founder = "Sai Ram";
-        // console.log(founder);
-        // {
-        //     let trainer = "Ram";
-        //     // var trainer = "Ram";
-        //     console.log(founder);
-        //     console.log(trainer);
-        // }
-        // function classroom(){
-        //     const std = "John";
-        //     console.log(std);
-        //     console.log(founder);
-        // }
-        // classroom();
-        //     console.log(std);
+        // //Deep copy
+        // let c = ['html','css']
+        // let d = [...c] //spread operator
+        // d[0] = 'react'
+        // console.log(c) //html css
+        // console.log(d) //react css
 
+        // let obj = {name: "John", age: 25}
+        // obj2.name = "Jane"
+        // console.log(obj) //Jane 25
+        // console.log(obj2) //Jane 25
 
-        //how to set the data in local storage
-        // let name = "jessy";
-        // localStorage.setItem("pfs3", name);
-        // console.log(name);
+        // // object deep copy
+        // let obj2 = {...obj}
+        // obj2.name = 'jessy'
+        // console.log(obj) //John 25
+        // console.log(obj2) //jessy 25
 
-        // //how to get the data from local storage
-        // let data = localStorage.getItem("pfs3");
-        // console.log(data);
+        
+        // Destructuring
+        let data = [[['html','css'],['js','react']],[['flask','springboot'],['python','java']]]
+        let [[static,dynamic],[framework,language]] = data
+        console.log(framework)
+        console.log(data[1][0][0])
 
-        // let arr = [{name: "jessy", age: 20}, {name: "john", age: 30}];
-        // localStorage.setItem("pfs3", JSON.stringify(arr));
-
-        // let arrdata = json.parse(localStorage.getItem("pfs3arr"));
-        // console.log(arrdata);
-
-        // let arr = ["html", "css", "js"];
-        // let data = arr.map((val,index,ar) => {
-        //     console.log(val);
-        //     console.log(index);
-        //     return "frontend-" + val;
-        // });
-        // console.log(data);
-
-
-        let arr = [1,2,3,4,5,6,7,8,9];
-        let data = arr.filter((val,index,ar) => {
-            return val % 2 == 0;
-        });
-        console.log(data);
-        // reduce is used for calculations - ittakes the array elements
-        let total = data.reduce((acc, val) => {
-            return acc + val;
-        }, 0);
-        console.log(total);
-
+        let obj = {
+            name:'john',age:35, address:{
+                city:'vizag',
+                state:'AP'
+            }
+        }
+        let {name,age,address:{city,state}} = obj
+        console.log(city)
     </script>
 </body>
 </html>
